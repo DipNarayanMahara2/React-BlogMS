@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Form = ({ type }) => {
+const Form = ({ type, onSubmit }) => {
+  const [data, setData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({
+      ...data,
+      [name]: value,
+    });
+  };
+
   return (
     <div className="bg-gray-50">
       <div className="min-h-screen flex flex-col items-center justify-center py-6 px-4">
@@ -18,6 +31,7 @@ const Form = ({ type }) => {
                   </label>
                   <div className="relative flex items-center">
                     <input
+                      onChange={handleChange}
                       name="username"
                       type="text"
                       required
@@ -76,6 +90,7 @@ const Form = ({ type }) => {
                   </label>
                   <div className="relative flex items-center">
                     <input
+                      onChange={handleChange}
                       name="email"
                       type="email"
                       required
@@ -104,6 +119,7 @@ const Form = ({ type }) => {
                 </label>
                 <div className="relative flex items-center">
                   <input
+                    onChange={handleChange}
                     name="password"
                     type="password"
                     required
@@ -152,6 +168,7 @@ const Form = ({ type }) => {
               )}
               <div className="!mt-12">
                 <button
+                  onClick={onSubmit}
                   type="button"
                   className="w-full py-2 px-4 text-[15px] font-medium tracking-wide rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none"
                 >

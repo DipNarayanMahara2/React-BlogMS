@@ -1,44 +1,51 @@
 import React from "react";
-import Layout from "../../../Components/layout";
 
 const BlogCard = () => {
   return (
-    <Layout>
-      <div class="bg-gray-100 px-4 py-12">
-        <div class="max-w-5xl max-lg:max-w-3xl max-sm:max-w-sm mx-auto">
-          <h2 class="text-3xl font-bold text-slate-900 mb-8">
-            Latest Blog Posts
+    <div className="mx-auto px-2 py-2 max-w-xs">
+      {" "}
+      {/* even smaller width */}
+      <div className="bg-white shadow-md rounded-lg overflow-hidden">
+        <a
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://timesofindia.indiatimes.com/india/international-space-station-to-retire-in-2030-will-fall-into-pacific-ocean-a-year-later-nasa/articleshow/89392862.cms"
+        >
+          <img
+            src="https://static.toiimg.com/thumb/msid-89392914,width-1070,height-580,imgsize-104716,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
+            alt="uploaded cover image"
+            className="object-cover w-full h-40" // shorter image
+          />
+        </a>
+        <div className="p-3">
+          {" "}
+          {/* tighter padding */}
+          <h2 className="truncate font-bold mb-2 text-base text-gray-800">
+            ISS to retire in 2030, fall into Pacific
           </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-sm:gap-8">
-            <div class="bg-white rounded overflow-hidden">
-              <img
-                src="https://readymadeui.com/cardImg.webp"
-                alt="Blog Post 1"
-                class="w-full h-52 object-cover"
-              />
-              <div class="p-6">
-                <h3 class="text-lg font-semibold text-slate-900 mb-3">
-                  Lorem Ipsum Dolor
-                </h3>
-                <p class="text-slate-600 text-sm leading-relaxed">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore...
-                </p>
-                <p class="text-orange-500 text-[13px] font-semibold mt-2">
-                  08 April 2024
-                </p>
-                <a
-                  href="javascript:void(0);"
-                  class="mt-6 inline-block px-4 py-2 rounded tracking-wider bg-orange-500 hover:bg-orange-600 text-white text-[13px] font-medium"
-                >
-                  Read More
-                </a>
-              </div>
+          <p className="text-gray-600 text-xs mb-3">
+            The ISS, the world’s largest habitable satellite, will continue its
+            mission until 2030...
+          </p>
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-gray-800 text-[11px] font-semibold">
+                Times of India
+              </p>
+              <p className="text-gray-500 text-[10px]">Feb 6, 2022</p>
             </div>
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://timesofindia.indiatimes.com/india/international-space-station-to-retire-in-2030-will-fall-into-pacific-ocean-a-year-later-nasa/articleshow/89392862.cms"
+              className="bg-green-500 hover:bg-green-600 text-white text-[10px] font-semibold rounded-full px-3 py-1"
+            >
+              Read
+            </a>
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 };
 
