@@ -6,7 +6,7 @@ import BlogCard from "./components/BLogCard/BlogCard";
 const Home = () => {
   return (
     <Layout>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap m-5">
         <BlogCard />
         <BlogCard />
         <BlogCard />
